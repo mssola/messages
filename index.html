@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <title>Messages</title>
+  </head>
+  <body>
+    <h1>Messages</h1>
+    <div>
+      <form action="/message" method="post">
+        <input autocomplete="off" type="text" name="message">
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <br/>
+    <div>
+      {{if .Messages}}
+      <span>List of messages:</span>
+      <ul>
+        {{range .Messages}}
+        <li>{{.}}</li>
+        {{end}}
+      </ul>
+      {{end}}
+    </div>
+  </body>
+</html>
