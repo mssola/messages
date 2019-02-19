@@ -1,0 +1,21 @@
+replicaCount: 1
+
+image:
+  repository: mssola/messages
+  tag: 0.1
+  pullPolicy: Always
+
+service:
+  type: NodePort
+  port: 80
+
+tolerations: []
+affinity: {}
+
+persistence: /opt/messages-data
+
+redis:
+  image:
+    tag: 5.0.3
+  persistence:
+    existingClaim: redis-storage

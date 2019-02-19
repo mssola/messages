@@ -15,14 +15,14 @@ build this application you need to perform:
 
     $ go build
 
-That being said, in order to run this application we recommend using docker. You
+That being said, in order to run this application we recommend using Docker. You
 can build the Docker image like this:
 
     $ docker build -t mssola/messages:0.1 .
 
 I have already pushed some tags on the
 [DockerHub](https://cloud.docker.com/u/mssola/repository/docker/mssola/messages). In
-order to run this application you need to take into account three environment
+order to run this application you need to take into account some environment
 variables:
 
 - `MESSAGES_FILE_PATH`: the base path were the index page is located. You
@@ -37,7 +37,7 @@ variables:
 ### Kubernetes and Helm
 
 You can find more information about how to deploy this application with plain
-Kubernetes manifests or with Helm in the `kubernetes` directory.
+Kubernetes manifests or with Helm in the [kubernetes](./kubernetes) directory.
 
 ## License
 

@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-storage
+  labels:
+    storage: redis
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Recycle
+  hostPath:
+    path: "{{ .Values.persistence }}"
+---
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: redis-storage
+  labels:
+    storage: redis
+spec:
+  accessModes:
+    - ReadWriteMany
+  resources:
+    requests:
+      storage: 1Gi
