@@ -34,7 +34,7 @@ variables:
 - `MESSAGES_REDIS_PASSWORD`: the password to be used when connecting to the
   redis instance.
 
-### Kubernetes and Helm
+## Kubernetes and Helm
 
 You can find more information about how to deploy this application with plain
 Kubernetes manifests or with Helm in the [kubernetes](./kubernetes) directory.
